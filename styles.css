@@ -75,7 +75,7 @@ header nav ul li:hover::after {
     transform: translate(-50%, -50%);
     filter: blur(50px);
     z-index:1;
-    animation: pulse 5s infinite alternate;
+    animation: pulse 15s infinite alternate;
 }
 
 @keyframes pulse{
@@ -105,7 +105,7 @@ header nav ul li:hover::after {
     opacity: 0;
     pointer-events: none;
     transform: translateX(0);
-    transition: opacity 5s ease;
+    transition: opacity 15s ease;
 }
 
 .item.active {
