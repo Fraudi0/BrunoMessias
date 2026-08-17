@@ -25,7 +25,7 @@ function showSlide(index) {
     clearInterval(timer);
     timer = setInterval(() => {
         showSlide(active + 1);
-    }, 5000);
+    }, 15000);
 }
 
 prevButton?.addEventListener('click', () => {
