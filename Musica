@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Rio </title>
+</head>
+<body>
+
+    <h1>Qual é seu genero</h1>
+<label for="estilos">Seleção de Gênero Musical Preferido:</label>
+  <select id="estilos" onchange="verificarMusica()">
+    <option value="">Selecione...</option>
+    <option value="1">1 - Rock</option>
+    <option value="2">2 - Pop</option>
+    <option value="3">3 - Hip hop</option>
+    <option value="4">4 - Eletronica</option>
+    <option value="5">5 - jazz</option>
+    <option value="6">6 - Classica</option>
+    <option value="7">7 - Brega</option>
+  </select>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarMusica() {
+      const valor = document.getElementById('estilos').value;
+      const res = document.getElementById('resultado');
+ 
+      switch (valor) {
+        case '1':
+          res.textContent = 'Lugar certo!';
+          break;
+        case '2':
+          res.textContent = 'Nem sabe Portugues ';
+          break;
+        case '3':
+          res.textContent = 'Se sentindo Negão neh';
+          break;
+        case '4':
+          res.textContent = 'Quer usar um doce neh ';
+          break;
+        case '5':
+          res.textContent = 'Não exite pessoas que escuta esse genero';
+          break;
+        case '6':
+          res.textContent = 'Não exite no Brasil';
+          break;  
+        case '7':
+          res.textContent = 'Curti uam vaquejada me chama ';
+          break;  
+        default:
+          res.textContent = 'Por favor, escolha um estilo válido.';
+      }
+    }
+  </script>
+
+</body>
+</html>
