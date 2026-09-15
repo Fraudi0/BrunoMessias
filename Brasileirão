@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileirão</title>
+</head>
+<body>
+
+    <h1>Qual é seu Time</h1>
+<label for="estilos">Qual é seu Time Preferido:</label>
+  <select id="estilos" onchange="verificarMusica()">
+    <option value="">Selecione...</option>
+    <option value="1">1 - Palmeiras</option>
+    <option value="2">2 - Curintia</option>
+    <option value="3">3 - Tricolor</option>
+    <option value="4">4 - Viuva do Pelé</option>
+    <option value="5">5 - Vasco</option>
+    <option value="6">6 - Flamengo</option>
+    <option value="7">7 - Bairro</option>
+  </select>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarMusica() {
+      const valor = document.getElementById('estilos').value;
+      const res = document.getElementById('resultado');
+ 
+      switch (valor) {
+        case '1':
+          res.textContent = 'Time certo!';
+          break;
+        case '2':
+          res.textContent = 'Nem sabe Portugues ';
+          break;
+        case '3':
+          res.textContent = 'Sentindo neh';
+          break;
+        case '4':
+          res.textContent = 'Quer sua muleta ';
+          break;
+        case '5':
+          res.textContent = 'Que o Coutinho voltou querendo demais Anota mais três pontinho na conta do pai A Barreira vai virar baile (ahn-ahn-ahn)A Barreira vai virar baile (ahn-ahn-ahn)A Barreira vai virar baile (ahn-ahn-ahn)';
+          break;
+        case '6':
+          res.textContent = '87 é do Sport';
+          break;  
+        case '7':
+          res.textContent = 'Brasileirão de 2023 dói neh ';
+          break;  
+        default:
+          res.textContent = 'Por favor, escolha um estilo válido.';
+      }
+    }
+  </script>
+
+</body>
+</html>
