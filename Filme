@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Filme é </title>
+</head>
+<body>
 
+    <h1>Qual é seu genero</h1>
+<label for="estilos">Escolha um Estilo de Filme:</label>
+  <select id="estilos" onchange="verificarfilme()">
+    <option value="">Selecione...</option>
+    <option value="1">1 - Ação</option>
+    <option value="2">2 - Comédia</option>
+    <option value="3">3 - Drama</option>
+    <option value="4">4 - Terror</option>
+    <option value="5">5 - Ficção Cientica</option>
+    <option value="6">6 - Romance</option>
+    <option value="7">7 - Dorama</option>
+  </select>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarfilme() {
+      const valor = document.getElementById('estilos').value;
+      const res = document.getElementById('resultado');
+ 
+      switch (valor) {
+        case '1':
+          res.textContent = 'Adora uma lutinha bangbangbang  neh!';
+          break;
+        case '2':
+          res.textContent = 'Quer rir neh seu triste.';
+          break;
+        case '3':
+          res.textContent = 'Quer ficar triste seu emo';
+          break;
+        case '4':
+          res.textContent = 'Quer tomar um susto olha sua nota ';
+          break;
+        case '5':
+          res.textContent = 'Não exite ET';
+          break;
+        case '6':
+          res.textContent = 'Não exite amor em SP';
+          break;  
+        case '7':
+          res.textContent = 'Gosta de um japones neh';
+          break;  
+        default:
+          res.textContent = 'Por favor, escolha um estilo válido.';
+      }
+    }
+  </script>
+
+
+
+   <script src="script.js"></script> 
+</body>
+</html>
